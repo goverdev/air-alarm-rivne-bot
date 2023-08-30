@@ -11,6 +11,10 @@ const REPULSE_AIR_ALARM_STICKER = 'CAACAgIAAxkBAAPvZO5FCv0jHFANLQquizmyK9UrwOwAA
 const bot = new TelegramBot(process.env.BOT_TOKEN, {polling: true});
 const source = new EventSource(AIR_ALARM_URL, {headers: {'X-API-Key': process.env.ALARM_API_TOKEN}});
 
+bot.onText('\/echo', ({chat}) => {
+    bot.sendMessage(chat.id, 'Bot is working...');
+});
+
 bot.on('my_chat_member', (msg) => {
     const { new_chat_member, old_chat_member, chat } = msg;
     const chatId = chat.id;
