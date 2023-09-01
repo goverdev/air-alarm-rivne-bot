@@ -12,6 +12,7 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {polling: true});
 const source = new EventSource(AIR_ALARM_URL, {headers: {'X-API-Key': process.env.ALARM_API_TOKEN}});
 
 bot.on('message', (msg) => {
+    console.log({ msg })
     const chatId = msg.chat.id;
 
     // send a message to the chat acknowledging receipt of their message
@@ -27,6 +28,7 @@ bot.on('my_chat_member', (msg) => {
         // Bot added to the channel
         try {
             source.addEventListener('update', ({data}) => {
+                console.log('update', { data });
                 if (data.alert) {
                     return bot.sendSticker(chatId, AIR_ALARM_STICKER);
                 }
