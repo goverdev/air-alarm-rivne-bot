@@ -3,9 +3,9 @@ const TelegramBot = require('node-telegram-bot-api');
 const EventSource = require('eventsource')
 
 const AIR_ALARM_URL = 'https://alerts.com.ua/api/states/live/16';
-const AIR_ALARM_STICKER = 'CAACAgIAAxkBAAPtZO5Euotz0NUe9M3UTT3TsNL5iXgAAlQzAAJpDHlL_sXLZdhkTsQwBA';
-const REPULSE_AIR_ALARM_STICKER = 'CAACAgIAAxkBAAPvZO5FCv0jHFANLQquizmyK9UrwOwAAhQ2AAJrknBLVfYeXtlVRwUwBA';
-// const CONTINUES_AIR_ALARM = 'CAACAgIAAxkBAAPwZO5FN7sc2NxClO5OjFgFCPdTEY4AAqE0AAI3FXBL1IDuh6lpN2swBA';
+const AIR_ALARM_STICKER = 'CAACAgIAAxkBAAIBHmT1tNto_GhOrhr48sn4LBCXFyvLAAJUMwACaQx5S_7Fy2XYZE7EMAQ';
+const REPULSE_AIR_ALARM_STICKER = 'CAACAgIAAxkBAAIBHGT1tMMIaumsv-lXEMBu-mrcDPcKAAIUNgACa5JwS1X2Hl7ZVUcFMAQ';
+// const CONTINUES_AIR_ALARM = 'CAACAgIAAxkBAAIBIGT1tPeVRHEmpeJT-2sTXE1FGdUiAAKhNAACNxVwS9SA7oepaTdrMAQ';
 
 
 const bot = new TelegramBot(process.env.BOT_TOKEN, {polling: true});
